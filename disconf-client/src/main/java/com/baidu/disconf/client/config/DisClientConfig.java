@@ -193,6 +193,15 @@ public final class DisClientConfig {
      */
     @DisInnerConfigAnnotation(name = "disconf.enable_local_download_dir_in_class_path", defaultValue = "true")
     public boolean enableLocalDownloadDirInClassPath = true;
+    
+    /**
+     * targetDirPathPrefix
+     *
+     * @author yangguochi
+     * @since 3.0.1
+     */
+    @DisInnerConfigAnnotation(name = "disconf.targetDirPathPrefix", defaultValue = "")
+    public String targetDirPathPrefix = "";
 
     public List<String> getHostList() {
         return hostList;

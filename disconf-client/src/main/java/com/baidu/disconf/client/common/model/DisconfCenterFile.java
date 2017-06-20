@@ -100,7 +100,7 @@ public class DisconfCenterFile extends DisconfCenterBaseModel {
     }
 
     public void setTargetDirPath(String targetDirPath) {
-        this.targetDirPath = targetDirPath;
+        this.targetDirPath = DisClientConfig.getInstance().targetDirPathPrefix + targetDirPath;
     }
 
     @Override
@@ -143,9 +143,9 @@ public class DisconfCenterFile extends DisconfCenterBaseModel {
     public String getFilePath() {
 
         // 不放到classpath, 则文件路径根据 userDefineDownloadDir 来设置
-        if (!DisClientConfig.getInstance().enableLocalDownloadDirInClassPath) {
-            return OsUtil.pathJoin(DisClientConfig.getInstance().userDefineDownloadDir, fileName);
-        }
+//        if (!DisClientConfig.getInstance().enableLocalDownloadDirInClassPath) {
+//            return OsUtil.pathJoin(DisClientConfig.getInstance().userDefineDownloadDir, fileName);
+//        }
 
         if (targetDirPath != null) {
 
