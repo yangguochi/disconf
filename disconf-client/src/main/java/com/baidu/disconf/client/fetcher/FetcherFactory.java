@@ -32,7 +32,7 @@ public class FetcherFactory {
                         DisClientConfig.getInstance().confServerUrlRetrySleepSeconds,
                         DisClientConfig.getInstance().enableLocalDownloadDirInClassPath,
                         DisClientConfig.getInstance().userDefineDownloadDir,
-                        DisClientSysConfig.getInstance().LOCAL_DOWNLOAD_DIR,
+                        DisClientConfig.getInstance().userDefineDownloadDir+"/_tmp/",
                         DisClientConfig.getInstance().getHostList());
 
         return fetcherMgr;
